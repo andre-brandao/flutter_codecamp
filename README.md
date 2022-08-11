@@ -1,6 +1,6 @@
 # flutter_codecamp
 
-A new Flutter project.
+Repositorio salvar meu progresso no codecamp -> https://www.youtube.com/watch?v=VPvVD8t02U8
 
 ## Getting Started
 
