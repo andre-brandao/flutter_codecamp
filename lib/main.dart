@@ -8,6 +8,7 @@ import 'dart:developer' as devtools show log;
 import 'package:flutter_codecamp/views/verify_email_build.dart';
 import 'package:flutter_codecamp/views/register_view.dart';
 import 'package:flutter_codecamp/views/login_view.dart';
+import 'package:flutter_codecamp/constants/routes.dart';
 
 //email brandaoandre00@gmail.com
 //senha foobar
@@ -23,9 +24,9 @@ void main() {
       ),
       home: const HomePage(),
       routes: {
-        '/login/': (context) => const LoginView(),
-        '/register/': (context) => const RegisterView(),
-        '/notes/': (context) => const NotesView(),
+        loginRoute: (context) => const LoginView(),
+        registerRoute: (context) => const RegisterView(),
+        notesRoute: (context) => const NotesView(),
       },
     ),
   );
@@ -84,7 +85,7 @@ class _NotesViewState extends State<NotesView> {
                 if (shouldLogout) {
                   await FirebaseAuth.instance.signOut();
                   Navigator.of(context).pushNamedAndRemoveUntil(
-                    '/login/',
+                    loginRoute,
                     (_) => false,
                   );
                 }
